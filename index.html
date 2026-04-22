@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Une évasion préparée et exécutée — Activité 2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+
+      <div class="header-band">
+        <p class="activity-label">Une évasion préparée et exécutée — Activité II</p>
+        <h1>Une évasion préparée</h1>
+      </div>
+
+      <div class="audio-block">
+        <label for="introAudio">Audio d'introduction</label>
+        <audio id="introAudio" controls>
+          <source src="Activite2 audiofinale.MP3" type="audio/mpeg" />
+          Votre navigateur ne prend pas en charge la lecture audio.
+        </audio>
+      </div>
+
+      <section class="rules-block" aria-label="Règles du jeu">
+        <h2>Règle</h2>
+        <p>
+          Votre quête commence au rez de chaussée de la bibliothèque. Quatre QR codes y sont dissimulés, chacun dans un espace qui a sa propre ambiance. Ouvrez l'œil… et bougez-vous !
+        </p>
+        <ul class="rules-list">
+          <li>Le premier est né dans l'ère du numérique.</li>
+          <li>Le deuxième est l'ancêtre de Netflix.</li>
+          <li>Le troisième s'est endormi sur le canapé… mais il vous attend.</li>
+          <li>Le quatrième préfère le grand air aux quatre murs.</li>
+        </ul>
+        <p>
+          Chaque QR code possède une couleur.<br>
+          &gt; Utilisez la première lettre de chaque couleur pour former un acronyme : c'est le premier code à entrer.
+        </p>
+        <p>
+          Ensuite, scannez les 4 QR codes.<br>
+          Chaque scan vous donnera un chiffre.<br>
+          &gt; À partir de ces chiffres, reconstituez une date importante de la vie d'Émile Charmier.
+        </p>
+        <p>
+          Une fois la date trouvée, entrez votre réponse dans le champ prévu et validez.
+        </p>
+      </section>
+
+        <div class="archive-section" style="text-align: center;">
+            <p>Pour vous aider, les archives de l'enquêteur Richard Bartle.</p>
+            <a href="Archives-activités 2.pdf" download style="text-decoration: none;">
+                <button class="archive-btn">Consulter les Archives</button>
+            </a>
+        </div>
+
+      <div style="margin-bottom: 1.8rem;"></div>
+
+      <div class="form-block">
+        <label for="codeInput">Code à 4 lettres</label>
+        <div class="code-input-wrap">
+          <input
+            id="codeInput"
+            class="code-input"
+            type="text"
+            maxlength="4"
+            placeholder="_ _ _ _"
+            autocomplete="off"
+          />
+        </div>
+        <button id="unlockBtn" type="button">Valider le code</button>
+        <p id="codeError" class="message error" aria-live="polite"></p>
+      </div>
+
+      <section id="dateSection" class="hidden">
+        <h2>"Un homme comme Charmier ne pouvait pas rester indéfiniment derrière ces murs. Quelque chose s'est passé et les archives en gardent la marque. Trouvez cette date. Format : JJ/MM/AAAA."</h2>
+
+        <div class="form-block">
+          <label for="dateInput">Date exacte</label>
+          <input
+            id="dateInput"
+            type="text"
+            placeholder="JJ/MM/AAAA"
+            autocomplete="off"
+          />
+          <button id="dateBtn" type="button">Valider</button>
+          <p id="dateError" class="message error" aria-live="polite"></p>
+        </div>
+
+        <div id="storyBlock" class="story-block hidden">
+          <p class="story-text">15 février 1879…
+C'est donc cette nuit-là que tout a basculé pour Émile Charmier. On parle de trois mois de préparation… pour quelques heures de fuite.
+Charmier était un stratège mais, un plan, aussi parfait soit-il… ne survit jamais intact à la réalité.
+
+Ce qui s'est passé ensuite est flou. J'ai trouvé des éléments… mais ils se contredisent.
+
+À vous de faire le tri !
+
+Direction le <strong>Cube de l'IUT</strong> maintenant !
+
+Cherchez moi bien, vous me trouverez dans la <strong>fresque</strong>.</p>
+          <img src="IUT.jpg" alt="Carte pour localiser le Cube" class="map-image" />
+          <button id="returnHomeBtn" type="button" class="return-home-btn">Retourner à la page d'accueil avant de partir</button>
+        </div>
+      </section>
+
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
